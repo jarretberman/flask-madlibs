@@ -38,8 +38,11 @@ class Story:
 # Here's a story to get you started
 
 
-story = Story(
+stories = [
+    Story(
     ["place", "noun", "verb", "adjective", "plural_noun"],
     """Once upon a time in a long-ago {place}, there lived a
-       large {adjective} {noun}. It loved to {verb} {plural_noun}."""
-)
+       large {adjective} {noun}. It loved to {verb} {plural_noun}."""),
+    Story(["noun", "noun_2", "preposition"],"The {noun} to {noun_2} is always {preposition} construction"),
+    Story(["ing_verb","plural_noun"],"I stopped {ing_verb} my inner {plural_noun}, we're on the same side now.")
+]

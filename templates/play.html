@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h3 class='my-2'>Pick your words</h3>
+
+<form action="/story{{num}}/answer">
+    {% for prompt in story.prompts %}
+        <div class="form-group">
+            <label for="exampleInputEmail1">{{prompt.replace('_', ' ')}}</label>
+            <input type="text" class="form-control" name={{prompt}}>
+        </div>
+    {% endfor %}
+    <button class= 'btn btn-dark'>Submit</button>
+</form>
+
+{% endblock %}

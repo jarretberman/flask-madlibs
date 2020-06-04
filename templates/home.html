@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Madlibs</h1>
+
+<h3>Pick a Story</h3><br>
+<select class = 'custom-select' name="stories" form ="play">
+    {% for story in stories %}
+    <option value= {{loop.index}}>{{loop.index}}</option>
+    {% endfor %}
+</select>
+<form action="/play" method="post" id="play">
+    <button class = "btn btn-success">Submit</button>
+</form>
+
+{% endblock%}
